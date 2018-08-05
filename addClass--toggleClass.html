@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://unpkg.com/vue"></script>
+  
+  <style>
+  
+    .red{
+       background:red;
+       padding:10px 20px;
+       color:#fff;
+     }
+    
+  </style>
+  
+  
+</head>
+<body>
+
+  <div id="app">
+    
+          <button :class="{ red:classData }" @click="callMethod()">hi im a simple button</button>    
+    
+  </div>
+    
+  
+  
+<script>
+    
+  var app = new Vue({
+    
+    el:'#app',
+    
+    data:{      
+      
+       classData:false,  
+      
+    },
+    methods:{
+      
+      callMethod(){
+        
+       return this.classData = !this.classData
+        
+      }
+      
+    }
+    
+    
+  })
+  
+  
+</script> 
+  
+</body>
+</html>
