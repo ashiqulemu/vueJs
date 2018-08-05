@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by anonymous (http://jsbin.com/limeluxanu/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>  Attribute Binding </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+  
+  <style>
+  
+  
+    .red{
+      
+       color:red;
+      
+     }
+    
+    .blue{
+      
+       color:blue;
+      
+     }
+  
+  
+  </style>
+  
+  
+</head>
+<body id="app"> 
+  
+  
+     <h2 :class="classbind"> Class Binding With simple  data Property  </h2>  <br>
+  
+     <h2 :class="{'blue': otherClassbind == 'sometext'}"> Class Binding With   --- CONDITION  --- </h2>  <br>
+
+  
+  
+  <script>
+  
+     new Vue({
+    
+    
+       el:'#app',
+    
+       data:{
+         
+            classbind:'red',    //  pull automatically  red class from style tag 
+      
+            otherClassbind:'sometext'       
+      
+        },
+ 
+    
+    
+        })
+  
+  
+  </script>
+  
+  
+</body>
+</html>
+
+
+
